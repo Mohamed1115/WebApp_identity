@@ -1,0 +1,159 @@
+﻿@{
+ViewData["Title"] = "Home Page";
+}
+
+<link rel="stylesheet" href="~/css/Index.css" />
+
+
+<!-- Hero Section -->
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="auth-alert auth-alert-success">
+        <span class="alert-icon">✓</span>
+        <span>@TempData["SuccessMessage"]</span>
+    </div>
+}
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="auth-alert auth-alert-danger">
+        <span class="alert-icon">✕</span>
+        <span>@TempData["ErrorMessage"]</span>
+    </div>
+}
+
+<div class="hero-section">
+    <div class="container hero-content">
+        <h1 class="hero-title">مرحباً بك في تطبيق الويب الحديث</h1>
+        <p class="hero-subtitle">ابدأ رحلتك معنا في بناء تطبيقات ويب قوية وآمنة باستخدام أحدث التقنيات والمعايير العالمية</p>
+        <div class="hero-buttons">
+            <a asp-controller="User" asp-action="Register" class="hero-btn hero-btn-primary">
+                <span>إنشاء حساب جديد</span>
+                <span>→</span>
+            </a>
+            <a asp-controller="User" asp-action="Login" class="hero-btn hero-btn-secondary">
+                <span>تسجيل الدخول</span>
+                <span>🔐</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Features Section -->
+<div class="features-section">
+    <div class="container">
+        <h2 class="section-title">لماذا تختارنا؟</h2>
+        <div class="features-grid">
+            <div class="feature-card fade-in">
+                <div class="feature-icon">🔒</div>
+                <h3 class="feature-title">أمان متقدم</h3>
+                <p class="feature-description">حماية بمعايير عالمية مع تشفير شامل لبياناتك وتأمين كامل للحسابات</p>
+            </div>
+
+            <div class="feature-card fade-in">
+                <div class="feature-icon">⚡</div>
+                <h3 class="feature-title">سرعة فائقة</h3>
+                <p class="feature-description">أداء محسّن وسرعة استجابة عالية لتجربة مستخدم سلسة ومريحة</p>
+            </div>
+
+            <div class="feature-card fade-in">
+                <div class="feature-icon">🎨</div>
+                <h3 class="feature-title">تصميم عصري</h3>
+                <p class="feature-description">واجهة مستخدم جميلة ومتجاوبة تعمل بكفاءة على جميع الأجهزة</p>
+            </div>
+
+            <div class="feature-card fade-in">
+                <div class="feature-icon">🔧</div>
+                <h3 class="feature-title">تكامل سهل</h3>
+                <p class="feature-description">ربط سريع مع الخدمات الخارجية مثل Google و GitHub</p>
+            </div>
+
+            <div class="feature-card fade-in">
+                <div class="feature-icon">📱</div>
+                <h3 class="feature-title">متوافق تماماً</h3>
+                <p class="feature-description">يعمل بسلاسة على الكمبيوتر والتابلت والهاتف المحمول</p>
+            </div>
+
+            <div class="feature-card fade-in">
+                <div class="feature-icon">🚀</div>
+                <h3 class="feature-title">قابل للتوسع</h3>
+                <p class="feature-description">مصمم للنمو مع احتياجات عملك ومعالجة حركة مرور عالية</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Stats Section -->
+<div class="stats-section">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">آمن تماماً</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">دعم فني</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">99.9%</div>
+                <div class="stat-label">وقت التشغيل</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">5000+</div>
+                <div class="stat-label">مستخدم سعيد</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CTA Section -->
+<div class="cta-section">
+    <div class="container">
+        <h2 class="cta-title">هل أنت مستعد للبدء؟</h2>
+        <p class="cta-description">انضم إلى آلاف المطورين الذين يبنون تطبيقات رائعة معنا</p>
+
+        <div class="cta-cards">
+            <div class="cta-card">
+                <div class="cta-card-icon">👤</div>
+                <h3 class="cta-card-title">مستخدم جديد؟</h3>
+                <p class="cta-card-text">أنشئ حسابك الآن واستمتع بجميع المميزات</p>
+                <a asp-controller="User" asp-action="Register" class="cta-card-btn">إنشاء حساب</a>
+            </div>
+
+            <div class="cta-card">
+                <div class="cta-card-icon">🔑</div>
+                <h3 class="cta-card-title">لديك حساب بالفعل؟</h3>
+                <p class="cta-card-text">سجّل دخولك وتابع من حيث توقفت</p>
+                <a asp-controller="User" asp-action="Login" class="cta-card-btn">تسجيل الدخول</a>
+            </div>
+
+            <div class="cta-card">
+                <div class="cta-card-icon">📚</div>
+                <h3 class="cta-card-title">تريد معرفة المزيد؟</h3>
+                <p class="cta-card-text">اطلع على سياسة الخصوصية والشروط</p>
+                <a asp-controller="Home" asp-action="Privacy" class="cta-card-btn">معرفة المزيد</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Scroll Animation
+    document.addEventListener('DOMContentLoaded', function() {
+        const fadeElements = document.querySelectorAll('.fade-in');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        fadeElements.forEach(element => {
+            observer.observe(element);
+        });
+    });
+</script>
