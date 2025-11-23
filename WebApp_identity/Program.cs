@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using WebApp_identity.Data;
@@ -27,6 +28,13 @@ public class Program
         builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
         
         builder.Services.AddTransient<IEmailSender, EmailSender>();
+        builder.Services.AddAuthorization(options =>
+        {
+            options.AddPolicy("FacilityLeader", policy =>
+                policy.Requirements.Add(new FacilityRoleRequirement("Leader")));
+        });
+
+        builder.Services.AddSingleton<IAuthorizationHandler, FacilityRoleHandler>();
         
 
         var app = builder.Build();

@@ -1,4 +1,5 @@
 using Mapster;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -22,6 +23,7 @@ public class UserController:Controller
         _emailSender = emailSender;
         _signInManager = signInManager;
     }
+    // [Authorize(Policy = "RequireAdminRole")]
     
     [HttpGet]
     public IActionResult Register()

@@ -237,3 +237,4 @@
 /home/mohamed/Code/Net/WEP/WebApp_identity/WebApp_identity/obj/Debug/net9.0/compressed/tqz13r391n-eporfx55jd.gz
 /home/mohamed/Code/Net/WEP/WebApp_identity/WebApp_identity/obj/Debug/net9.0/compressed/dc6ar3bprv-alk90h6qkq.gz
 /home/mohamed/Code/Net/WEP/WebApp_identity/WebApp_identity/obj/Debug/net9.0/compressed/72afahwakl-7tifpjo47i.gz
+/home/mohamed/Code/Net/WEP/WebApp_identity/WebApp_identity/obj/Debug/net9.0/WebApp_identity.sourcelink.json
